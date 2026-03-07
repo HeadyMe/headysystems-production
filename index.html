@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>HeadySystems — THE ARCHITECTURE OF INTELLIGENCE</title>
+<meta name="description" content="HeadySystems v4.0 — Enterprise AI orchestration platform. Zero vulnerabilities, 19 production dependencies, autonomous multi-agent intelligence.">
+<meta property="og:title" content="HeadySystems — The Architecture of Intelligence">
+<meta property="og:description" content="Enterprise AI orchestration. 50+ provisional patents. Autonomous multi-agent swarm intelligence.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://headysystems.com">
+<link rel="canonical" href="https://headysystems.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--purple:#8b5cf6;--purple-glow:#8b5cf644;--dark:#000000;--surface:rgba(15,15,20,.18);--border:rgba(255,255,255,.04);--text:#e2e8f0;--text-muted:rgba(255,255,255,.5)}
+html,body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--dark);color:var(--text);min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+#cosmic-canvas{position:fixed;inset:0;z-index:0;pointer-events:none}
+.site-wrap{position:relative;z-index:10;min-height:100vh;display:flex;flex-direction:column}
+header{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 2rem;position:sticky;top:0;z-index:100;background:rgba(0,0,0,.6);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.logo-wrap{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.logo-title{font-size:1.4rem;font-weight:700;color:var(--purple);letter-spacing:1px;text-shadow:0 0 10px var(--purple-glow)}
+.logo-sub{font-size:.6rem;color:var(--text-muted);letter-spacing:.2em;text-transform:uppercase}
+.version-badge{font-size:.55rem;padding:.15rem .5rem;background:var(--purple);color:#000;border-radius:50px;font-weight:700;letter-spacing:.05em}
+nav{display:flex;gap:.4rem;flex-wrap:wrap;background:rgba(20,20,25,0.15);padding:.4rem;border-radius:100px;backdrop-filter:blur(10px);border:1px solid var(--border)}
+nav a{padding:.35rem .9rem;border-radius:50px;font-size:.7rem;font-weight:500;color:rgba(255,255,255,.5);text-decoration:none;transition:all .3s}
+nav a:hover,nav a.active{background:var(--purple);color:#000;box-shadow:0 0 15px var(--purple)}
+.hero{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:6rem 2rem 3rem;text-align:center}
+.status{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1.2rem;border-radius:50px;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);font-size:.65rem;color:#22c55e;margin-bottom:2rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:600}
+.status-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pulse 2s ease infinite;box-shadow:0 0 10px #22c55e}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hero h1{font-size:clamp(3rem,8vw,5.5rem);font-weight:800;background:linear-gradient(135deg,#8b5cf6,#a78bfa,#c4b5fd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1rem;letter-spacing:-.03em;line-height:1.05}
+.hero-sub{font-size:clamp(.9rem,2vw,1.1rem);color:#fff;margin-bottom:.8rem;font-weight:400;letter-spacing:.25em;text-transform:uppercase;opacity:.85}
+.hero-mantra{font-size:.8rem;color:var(--text-muted);letter-spacing:.15em;margin-bottom:3rem}
+.stats{display:inline-grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin:0 auto 4rem;background:var(--surface);padding:2rem 3rem;border-radius:24px;backdrop-filter:blur(12px);border:1px solid var(--border)}
+.stat{text-align:center;animation:float 4s ease infinite}
+.stat:nth-child(2){animation-delay:.5s}.stat:nth-child(3){animation-delay:1s}.stat:nth-child(4){animation-delay:1.5s}
+.stat-val{font-size:1.8rem;font-weight:800;color:#fff;margin-bottom:.3rem;text-shadow:0 0 15px rgba(255,255,255,.3)}
+.stat-lbl{font-size:.6rem;color:var(--purple);text-transform:uppercase;letter-spacing:.2em;font-weight:700}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;max-width:1200px;margin:0 auto 5rem;padding:0 2rem}
+.card{background:var(--surface);backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:20px;padding:2rem;text-align:left;transition:all .4s ease;position:relative;overflow:hidden}
+.card:hover{border-color:rgba(139,92,246,.3);transform:translateY(-4px);box-shadow:0 20px 40px rgba(139,92,246,.1)}
+.card-icon{font-size:1.8rem;margin-bottom:1rem}
+.card h3{font-size:1rem;font-weight:700;color:#fff;margin-bottom:.6rem}
+.card p{font-size:.78rem;color:var(--text-muted);line-height:1.6}
+.card .badge{display:inline-block;font-size:.55rem;padding:.2rem .5rem;background:rgba(139,92,246,.15);color:var(--purple);border-radius:50px;font-weight:600;letter-spacing:.05em;margin-top:.8rem}
+.arch-section{max-width:1200px;margin:0 auto 5rem;padding:0 2rem}
+.arch-section h2{font-size:1.6rem;font-weight:700;color:#fff;text-align:center;margin-bottom:2rem;letter-spacing:-.02em}
+.arch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.arch-item{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.5rem;text-align:center;transition:all .3s}
+.arch-item:hover{border-color:rgba(139,92,246,.2)}
+.arch-item .num{font-size:1.4rem;font-weight:800;color:var(--purple);margin-bottom:.3rem}
+.arch-item .lbl{font-size:.65rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.15em}
+footer{text-align:center;padding:2rem;border-top:1px solid var(--border);font-size:.65rem;color:var(--text-muted);letter-spacing:.1em}
+footer a{color:var(--purple);text-decoration:none}
+@media(max-width:768px){.stats{grid-template-columns:repeat(2,1fr);gap:1.5rem;padding:1.5rem}.arch-grid{grid-template-columns:1fr 1fr}header{flex-direction:column;gap:.8rem}nav{justify-content:center}}
+@media(max-width:480px){.arch-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+</style></head><body>
+<canvas id="cosmic-canvas"></canvas>
+<div class="site-wrap">
+<header>
+<a href="https://headysystems.com" class="logo-wrap">
+<div><span class="logo-title">HeadySystems</span><br><span class="logo-sub">The Architecture of Intelligence</span></div>
+<span class="version-badge">v4.0</span>
+</a>
+<nav>
+<a href="https://headysystems.com" class="active">Systems</a>
+<a href="https://headyme.com">HeadyMe</a>
+<a href="https://headymcp.com">MCP</a>
+<a href="https://headyconnection.org">Connection</a>
+<a href="https://headyapi.com">API</a>
+<a href="https://headytrader.com">Trader</a>
+<a href="https://headymusic.com">Music</a>
+<a href="https://myheady.ai">myHeady</a>
+</nav>
+</header>
+
+<main class="hero">
+<div class="status"><span class="status-dot"></span>Enterprise Production — All Systems Nominal</div>
+<h1>HeadySystems</h1>
+<p class="hero-sub">The Architecture of Intelligence</p>
+<p class="hero-mantra">Autonomous Multi-Agent Orchestration · Latent OS · Sacred Geometry</p>
+
+<div class="stats">
+<div class="stat"><div class="stat-val">19</div><div class="stat-lbl">Dependencies</div></div>
+<div class="stat"><div class="stat-val">0</div><div class="stat-lbl">Vulnerabilities</div></div>
+<div class="stat"><div class="stat-val">50+</div><div class="stat-lbl">Patents Filed</div></div>
+<div class="stat"><div class="stat-val">12</div><div class="stat-lbl">Domains</div></div>
+</div>
+
+<div class="cards">
+<div class="card">
+<div class="card-icon">🧠</div>
+<h3>Latent OS Core</h3>
+<p>Continuous Semantic Logic engine with 3D vector memory. pgvector-backed knowledge graph with dynamic semantic packing for optimal AI context windows.</p>
+<span class="badge">945 Production Files</span>
+</div>
+<div class="card">
+<div class="card-icon">🐝</div>
+<h3>Autonomous Swarm</h3>
+<p>Multi-agent bee swarm with 30+ specialized workers. Battle Arena evaluates AI models competitively. ContextWeaver engine scores relevance across the full AST graph.</p>
+<span class="badge">Auto-Success Pipeline</span>
+</div>
+<div class="card">
+<div class="card-icon">⚡</div>
+<h3>Edge Intelligence</h3>
+<p>Cloudflare Workers serving holographic UI projections across 12 domains. Cache vaporization protocol ensures zero stale content. Sub-50ms edge inference.</p>
+<span class="badge">Global Edge Network</span>
+</div>
+<div class="card">
+<div class="card-icon">🔐</div>
+<h3>Zero Trust Security</h3>
+<p>7-gate CI/CD pipeline: TruffleHog, CodeQL, npm audit, dependency review, SBOM generation, Trivy container scan, smoke tests. Post-quantum ready.</p>
+<span class="badge">0 Vulnerabilities</span>
+</div>
+<div class="card">
+<div class="card-icon">🌐</div>
+<h3>MCP Bridge</h3>
+<p>Model Context Protocol server with SSE, HTTP, WebSocket, and stdio transports. Connects Claude, Cursor, Windsurf, and Antigravity IDE to the Latent OS.</p>
+<span class="badge">4 Transport Modes</span>
+</div>
+<div class="card">
+<div class="card-icon">📡</div>
+<h3>Multi-Model Router</h3>
+<p>Unified API routing across Claude, GPT-4o, Gemini, Groq, and Perplexity. Provider failover, cost optimization, and model-specific prompt engineering.</p>
+<span class="badge">5 AI Providers</span>
+</div>
+</div>
+</main>
+
+<section class="arch-section">
+<h2>Architecture Metrics</h2>
+<div class="arch-grid">
+<div class="arch-item"><div class="num">637</div><div class="lbl">npm Packages</div></div>
+<div class="arch-item"><div class="num">405</div><div class="lbl">JS Modules</div></div>
+<div class="arch-item"><div class="num">46</div><div class="lbl">Directories</div></div>
+<div class="arch-item"><div class="num">55</div><div class="lbl">Test Files</div></div>
+<div class="arch-item"><div class="num">7</div><div class="lbl">Security Gates</div></div>
+<div class="arch-item"><div class="num">~100MB</div><div class="lbl">Install Size</div></div>
+</div>
+</section>
+
+<footer>
+© 2026 <a href="https://headysystems.com">Heady Systems LLC</a>. All Rights Reserved. · <a href="https://headyfoundation.org">Foundation</a> · <a href="mailto:e@headyconnection.org">Contact</a>
+</footer>
+</div>
+
+<script>
+(function(){
+    const c=document.getElementById('cosmic-canvas'),ctx=c.getContext('2d');
+    let W,H,stars=[],time=0;
+    function resize(){W=c.width=window.innerWidth;H=c.height=window.innerHeight;stars=[];for(let i=0;i<200;i++)stars.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.5+.3,s:Math.random()*.5+.1,b:Math.random()})}
+    function hc(i,t,a){const h=(i/t*360+time*.1)%360;return`hsla(${h},70%,65%,${a})`}
+    function proj(x,y,z){const s=600/(600+z);return{x:W/2+x*s,y:H/2+y*s}}
+    function drawStars(){ctx.fillStyle='#000';ctx.fillRect(0,0,W,H);for(const s of stars){s.b+=s.s*.02;const a=.3+Math.sin(s.b)*.3;ctx.fillStyle=`rgba(255,255,255,${a})`;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill()}}
+    function drawGeo(){
+        ctx.save();ctx.lineWidth=.8;
+        const r=Math.min(W,H)*.35,tY=Math.sin(time*.0003)*.3;
+        const n=[{x:0,y:0,z:0}];
+        for(let i=0;i<6;i++){const a=(Math.PI/3)*i;n.push({x:Math.cos(a)*r*.45,y:Math.sin(a)*r*.45,z:Math.sin(a+time*.0002)*r*.1})}
+        for(let i=0;i<6;i++){const a=(Math.PI/3)*i+Math.PI/6;n.push({x:Math.cos(a)*r*.85,y:Math.sin(a)*r*.85,z:Math.cos(a+time*.0003)*r*.15})}
+        let li=0;const tl=(n.length*(n.length-1))/2;
+        for(let i=0;i<n.length;i++)for(let j=i+1;j<n.length;j++){
+            const p1=proj(n[i].x,n[i].y,n[i].z),p2=proj(n[j].x,n[j].y,n[j].z);
+            ctx.strokeStyle=hc(li,tl,.25);ctx.shadowColor=hc(li,tl,.1);ctx.shadowBlur=6;
+            ctx.beginPath();ctx.moveTo(p1.x,p1.y);ctx.lineTo(p2.x,p2.y);ctx.stroke();li++;
+        }
+        for(let i=0;i<n.length;i++){const p=proj(n[i].x,n[i].y,n[i].z);ctx.strokeStyle=hc(i+tl,n.length+tl,.6);ctx.shadowBlur=12;ctx.beginPath();ctx.arc(p.x,p.y,3,0,Math.PI*2);ctx.stroke()}
+        ctx.restore();
+    }
+    function animate(){time++;drawStars();drawGeo();requestAnimationFrame(animate)}
+    window.addEventListener('resize',resize);resize();animate();
+})();
+</script>
+</body></html>
