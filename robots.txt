@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /health
+Disallow: /api/
+
+Sitemap: https://headysystems.com/sitemap.xml
